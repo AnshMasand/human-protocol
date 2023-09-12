@@ -62,18 +62,18 @@ export class JobController {
     return this.jobService.getResult(req.user.id, jobId);
   }
 
-  @Public()
-  @Get('/cron/launch')
-  public async launchCronJob(): Promise<any> {
-    return this.jobService.launchCronJob();
-  }
-
   @Patch('/cancel/:id')
   public async cancelJob(
     @Request() req: RequestWithUser,
     @Param() params: JobCancelDto,
   ): Promise<boolean> {
     return this.jobService.requestToCancelJob(req.user.id, params.id);
+  }
+
+  @Public()
+  @Get('/cron/launch')
+  public async launchCronJob(): Promise<any> {
+    return this.jobService.launchCronJob();
   }
 
   @Public()

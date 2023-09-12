@@ -1,5 +1,6 @@
 import gql from 'graphql-tag';
 import { IEscrowsFilter } from '../../interfaces';
+import { EscrowStatus } from '../../types';
 
 const ESCROW_FRAGMENT = gql`
   fragment EscrowFields on Escrow {
@@ -26,9 +27,10 @@ const ESCROW_FRAGMENT = gql`
 `;
 
 export const GET_ESCROWS_QUERY = (filter: IEscrowsFilter) => {
-  const { launcher, reputationOracle, recordingOracle, status, from, to } =
-    filter;
-
+  const { launcher, reputationOracle, recordingOracle, from, to } = filter;
+  const status: string | undefined = filter.status
+    ? EscrowStatus[filter.status!]
+    : undefined;
   const WHERE_CLAUSE = `
     where: {
       ${launcher ? `launcher: $launcher` : ''}

@@ -67,6 +67,10 @@ import { RoutingProtocolService } from './routing-protocol.service';
 import { JOB_RETRIES_COUNT_THRESHOLD } from '../../common/constants';
 import { SortDirection } from '../../common/enums/collection';
 import { EventType } from '../../common/enums/webhook';
+import {
+  databaseToFilterStatus,
+  filterToDatabaseStatus,
+} from '../../common/utils/status';
 
 @Injectable()
 export class JobService {
@@ -396,9 +400,7 @@ export class JobService {
   ): Promise<JobListDto[]> {
     let statusFilter: any;
     if (status) {
-      statusFilter = In([status]);
-      if (status === JobStatusFilter.PENDING)
-        statusFilter = In([JobStatus.PENDING, JobStatus.PAID]);
+      statusFilter = In(filterToDatabaseStatus(status));
     }
 
     const jobs = await this.jobRepository.find(
@@ -413,10 +415,7 @@ export class JobService {
       address: original.escrowAddress,
       network: NETWORKS[original.chainId as ChainId]!.title,
       fundAmount: original.fundAmount,
-      status:
-        original.status === JobStatus.PAID
-          ? JobStatusFilter.PENDING
-          : JobStatusFilter[original.status],
+      status: databaseToFilterStatus(original.status),
     }));
 
     return transformedJobs;

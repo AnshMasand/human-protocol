@@ -5,15 +5,15 @@ export enum JobStatus {
   FAILED = 'FAILED',
   TO_CANCEL = 'TO_CANCEL',
   CANCELED = 'CANCELED',
+  COMPLETED = 'COMPLETED',
 }
 
 export enum JobStatusFilter {
   PENDING = 'PENDING',
-  PAID = 'PAID',
   LAUNCHED = 'LAUNCHED',
   FAILED = 'FAILED',
-  TO_CANCEL = 'TO_CANCEL',
   CANCELED = 'CANCELED',
+  COMPLETED = 'COMPLETED',
 }
 
 export enum JobRequestType {

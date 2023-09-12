@@ -37,16 +37,11 @@ export class JobRepository {
   public async findOne(
     where: FindOptionsWhere<JobEntity>,
     options?: FindOneOptions<JobEntity>,
-  ): Promise<JobEntity> {
+  ): Promise<JobEntity | null> {
     const jobEntity = await this.jobEntityRepository.findOne({
       where,
       ...options,
     });
-
-    if (!jobEntity) {
-      this.logger.log(ErrorJob.NotFound, JobRepository.name);
-      throw new NotFoundException(ErrorJob.NotFound);
-    }
 
     return jobEntity;
   }
