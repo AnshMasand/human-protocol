@@ -45,4 +45,3 @@ A `.env` file with the following variables should be added in the root folder of
 | FE\_URL         | Frontend url                           |     | ​                         | ​[http://localhost:3005](http://localhost:3005/)​ |
 | SESSION\_SECRET | Secret used to sign the session cookie |     | ​                         | session\_key                                      |
 
-**Example**
