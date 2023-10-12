@@ -2,10 +2,10 @@
 
 ## Typescript SDK​
 
-* [Encryption](modules/enpcryption.md)    
-    * [Encryption](classes/enpcryption.Encryption.md)    
-    * [EnpcryptionUtils](classes/enpcryption.EnpcryptionUtils.md) 
+* [Encryption](./docs/modules/enpcryption.md)    
+    * [Encryption](./docs/classes/enpcryption.Encryption.md)    
+    * [EnpcryptionUtils](./docs/classes/enpcryption.EnpcryptionUtils.md) 
 
-* [Escrow](modules/escrow.md)    
-    * [Encryption](classes/escrow.EscrowClient.md)    
-    * [EnpcryptionUtils](classes/escrow.EscrowUtils.md) 
+* [Escrow](./docs/modules/escrow.md)    
+    * [Encryption](./docs/classes/escrow.EscrowClient.md)    
+    * [EnpcryptionUtils](./docs/classes/escrow.EscrowUtils.md) 
