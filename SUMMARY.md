@@ -2,10 +2,10 @@
 
 ## Typescript SDK​
 
-* [Encryption](packages/sdk/typescript/human-protocol-sdk/docs/modules/enpcryption.md)    
-    * [Encryption](packages/sdk/typescript/human-protocol-sdk/docs/classes/enpcryption.Encryption.md)    
-    * [EnpcryptionUtils](packages/sdk/typescript/human-protocol-sdk/docs/classes/enpcryption.EnpcryptionUtils.md) 
+* [Encryption](packages/sdk/typescript/human-protocol-sdk/docs/modules/encryption.md)    
+    * [Encryption](packages/sdk/typescript/human-protocol-sdk/docs/classes/encryption.Encryption.md)    
+    * [EnpcryptionUtils](packages/sdk/typescript/human-protocol-sdk/docs/classes/encryption.EnpcryptionUtils.md) 
 
 * [Escrow](packages/sdk/typescript/human-protocol-sdk/docs/modules/escrow.md)    
-    * [Encryption](packages/sdk/typescript/human-protocol-sdk/docs/classes/escrow.EscrowClient.md)    
-    * [EnpcryptionUtils](packages/sdk/typescript/human-protocol-sdk/docs/classes/escrow.EscrowUtils.md) 
+    * [EscrowClient](packages/sdk/typescript/human-protocol-sdk/docs/classes/escrow.EscrowClient.md)    
+    * [EscrowUtils](packages/sdk/typescript/human-protocol-sdk/docs/classes/escrow.EscrowUtils.md) 
