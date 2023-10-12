@@ -3,7 +3,7 @@
 * [CONTRACTS\_LIST](README.md)
 * [Contributing to HUMAN](CONTRIBUTING.MD)
 * [Maintainers](CONTRIBUTORS.md)
-* [README](README.md)
+*
 * [.github](.github/README.md)
   * [PULL\_REQUEST\_TEMPLATE](.github/PULL\_REQUEST\_TEMPLATE.md)
   * [ISSUE\_TEMPLATE](.github/ISSUE\_TEMPLATE/README.md)
