@@ -12,7 +12,7 @@
     * [feature\_request](.github/ISSUE\_TEMPLATE/feature\_request.md)
 * [docs](docs/README.md)
   * [Fortune-v1](docs/Fortune-v1.md)
-  * [Fortune-v1](modules.md)
+  * [modules](docs/modules.md)
 * [packages](packages/README.md)
   * [Human Protocol Core Smart Contracts](packages/core/README.md)
     * [Human Protocol MultiversX Smart Contracts](packages/core/mx/README.md)
