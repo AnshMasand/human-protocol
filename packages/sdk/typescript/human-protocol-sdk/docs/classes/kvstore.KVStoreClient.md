@@ -1,6 +1,8 @@
+[@human-protocol/sdk](../README.md) / [Modules](../modules.md) / [kvstore](../modules/kvstore.md) / KVStoreClient
+
 # Class: KVStoreClient
 
-[kvstore](../wiki/kvstore).KVStoreClient
+[kvstore](../modules/kvstore.md).KVStoreClient
 
 ## Introduction
 
@@ -74,19 +76,19 @@ const kvstoreClient = await KVStoreClient.build(signer);
 
 ### Constructors
 
-- [constructor](../wiki/kvstore.KVStoreClient#constructor)
+- [constructor](kvstore.KVStoreClient.md#constructor)
 
 ### Properties
 
-- [contract](../wiki/kvstore.KVStoreClient#contract)
-- [signerOrProvider](../wiki/kvstore.KVStoreClient#signerorprovider)
+- [contract](kvstore.KVStoreClient.md#contract)
+- [signerOrProvider](kvstore.KVStoreClient.md#signerorprovider)
 
 ### Methods
 
-- [get](../wiki/kvstore.KVStoreClient#get)
-- [set](../wiki/kvstore.KVStoreClient#set)
-- [setBulk](../wiki/kvstore.KVStoreClient#setbulk)
-- [build](../wiki/kvstore.KVStoreClient#build)
+- [get](kvstore.KVStoreClient.md#get)
+- [set](kvstore.KVStoreClient.md#set)
+- [setBulk](kvstore.KVStoreClient.md#setbulk)
+- [build](kvstore.KVStoreClient.md#build)
 
 ## Constructors
 
@@ -105,7 +107,7 @@ const kvstoreClient = await KVStoreClient.build(signer);
 
 #### Defined in
 
-[kvstore.ts:100](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/kvstore.ts#L100)
+[kvstore.ts:100](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/kvstore.ts#L100)
 
 ## Properties
 
@@ -115,7 +117,7 @@ const kvstoreClient = await KVStoreClient.build(signer);
 
 #### Defined in
 
-[kvstore.ts:91](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/kvstore.ts#L91)
+[kvstore.ts:91](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/kvstore.ts#L91)
 
 ___
 
@@ -125,7 +127,7 @@ ___
 
 #### Defined in
 
-[kvstore.ts:92](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/kvstore.ts#L92)
+[kvstore.ts:92](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/kvstore.ts#L92)
 
 ## Methods
 
@@ -166,7 +168,7 @@ const value = await kvstoreClient.get('0xf39Fd6e51aad88F6F4ce6aB8827279cffFb9226
 
 #### Defined in
 
-[kvstore.ts:241](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/kvstore.ts#L241)
+[kvstore.ts:241](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/kvstore.ts#L241)
 
 ___
 
@@ -209,7 +211,7 @@ await kvstoreClient.set('Role', 'RecordingOracle');
 
 #### Defined in
 
-[kvstore.ts:165](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/kvstore.ts#L165)
+[kvstore.ts:165](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/kvstore.ts#L165)
 
 ___
 
@@ -254,13 +256,13 @@ await kvstoreClient.set(keys, values);
 
 #### Defined in
 
-[kvstore.ts:204](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/kvstore.ts#L204)
+[kvstore.ts:204](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/kvstore.ts#L204)
 
 ___
 
 ### build
 
-▸ `Static` **build**(`signerOrProvider`): `Promise`<[`KVStoreClient`](../wiki/kvstore.KVStoreClient)\>
+▸ `Static` **build**(`signerOrProvider`): `Promise`<[`KVStoreClient`](kvstore.KVStoreClient.md)\>
 
 Creates an instance of KVStoreClient from a Signer or Provider.
 
@@ -272,7 +274,7 @@ Creates an instance of KVStoreClient from a Signer or Provider.
 
 #### Returns
 
-`Promise`<[`KVStoreClient`](../wiki/kvstore.KVStoreClient)\>
+`Promise`<[`KVStoreClient`](kvstore.KVStoreClient.md)\>
 
 - An instance of KVStoreClient
 
@@ -286,4 +288,4 @@ Creates an instance of KVStoreClient from a Signer or Provider.
 
 #### Defined in
 
-[kvstore.ts:116](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/kvstore.ts#L116)
+[kvstore.ts:116](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/kvstore.ts#L116)

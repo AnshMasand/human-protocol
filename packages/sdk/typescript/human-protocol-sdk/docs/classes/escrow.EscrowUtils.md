@@ -1,17 +1,19 @@
+[@human-protocol/sdk](../README.md) / [Modules](../modules.md) / [escrow](../modules/escrow.md) / EscrowUtils
+
 # Class: EscrowUtils
 
-[escrow](../wiki/escrow).EscrowUtils
+[escrow](../modules/escrow.md).EscrowUtils
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](../wiki/escrow.EscrowUtils#constructor)
+- [constructor](escrow.EscrowUtils.md#constructor)
 
 ### Methods
 
-- [getEscrow](../wiki/escrow.EscrowUtils#getescrow)
-- [getEscrows](../wiki/escrow.EscrowUtils#getescrows)
+- [getEscrow](escrow.EscrowUtils.md#getescrow)
+- [getEscrows](escrow.EscrowUtils.md#getescrows)
 
 ## Constructors
 
@@ -44,7 +46,7 @@ Returns the escrow for a given address
 
 #### Defined in
 
-[escrow.ts:1455](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/escrow.ts#L1455)
+[escrow.ts:1455](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/escrow.ts#L1455)
 
 ___
 
@@ -70,4 +72,4 @@ Returns the list of escrows for given filter
 
 #### Defined in
 
-[escrow.ts:1383](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/escrow.ts#L1383)
+[escrow.ts:1383](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/escrow.ts#L1383)

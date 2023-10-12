@@ -1,6 +1,8 @@
+[@human-protocol/sdk](../README.md) / [Modules](../modules.md) / [encryption](../modules/encryption.md) / Encryption
+
 # Class: Encryption
 
-[encryption](../wiki/encryption).Encryption
+[encryption](../modules/encryption.md).Encryption
 
 ## Introduction
 
@@ -46,18 +48,18 @@ const encription = await Encryption.build(privateKey, passphrase);
 
 ### Constructors
 
-- [constructor](../wiki/encryption.Encryption#constructor)
+- [constructor](encryption.Encryption.md#constructor)
 
 ### Properties
 
-- [privateKey](../wiki/encryption.Encryption#privatekey)
+- [privateKey](encryption.Encryption.md#privatekey)
 
 ### Methods
 
-- [decrypt](../wiki/encryption.Encryption#decrypt)
-- [sign](../wiki/encryption.Encryption#sign)
-- [signAndEncrypt](../wiki/encryption.Encryption#signandencrypt)
-- [build](../wiki/encryption.Encryption#build)
+- [decrypt](encryption.Encryption.md#decrypt)
+- [sign](encryption.Encryption.md#sign)
+- [signAndEncrypt](encryption.Encryption.md#signandencrypt)
+- [build](encryption.Encryption.md#build)
 
 ## Constructors
 
@@ -75,7 +77,7 @@ Constructor for the Encryption class.
 
 #### Defined in
 
-[encryption.ts:53](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L53)
+[encryption.ts:53](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L53)
 
 ## Properties
 
@@ -85,7 +87,7 @@ Constructor for the Encryption class.
 
 #### Defined in
 
-[encryption.ts:46](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L46)
+[encryption.ts:46](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L46)
 
 ## Methods
 
@@ -134,7 +136,7 @@ const resultMessage = await encription.decrypt('message');
 
 #### Defined in
 
-[encryption.ts:180](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L180)
+[encryption.ts:180](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L180)
 
 ___
 
@@ -170,7 +172,7 @@ const resultMessage = await encription.sign('message');
 
 #### Defined in
 
-[encryption.ts:217](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L217)
+[encryption.ts:217](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L217)
 
 ___
 
@@ -232,13 +234,13 @@ const resultMessage = await encription.signAndEncrypt('message', publicKeys);
 
 #### Defined in
 
-[encryption.ts:129](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L129)
+[encryption.ts:129](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L129)
 
 ___
 
 ### build
 
-▸ `Static` **build**(`privateKeyArmored`, `passphrase?`): `Promise`<[`Encryption`](../wiki/encryption.Encryption)\>
+▸ `Static` **build**(`privateKeyArmored`, `passphrase?`): `Promise`<[`Encryption`](encryption.Encryption.md)\>
 
 Builds an Encryption instance by decrypting the private key from an encrypted private key and passphrase.
 
@@ -251,10 +253,10 @@ Builds an Encryption instance by decrypting the private key from an encrypted pr
 
 #### Returns
 
-`Promise`<[`Encryption`](../wiki/encryption.Encryption)\>
+`Promise`<[`Encryption`](encryption.Encryption.md)\>
 
 - The Encryption instance.
 
 #### Defined in
 
-[encryption.ts:64](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L64)
+[encryption.ts:64](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L64)

@@ -1,6 +1,8 @@
+[@human-protocol/sdk](../README.md) / [Modules](../modules.md) / [encryption](../modules/encryption.md) / EncryptionUtils
+
 # Class: EncryptionUtils
 
-[encryption](../wiki/encryption).EncryptionUtils
+[encryption](../modules/encryption.md).EncryptionUtils
 
 ## Introduction
 
@@ -30,14 +32,14 @@ const keyPair = await EncryptionUtils.generateKeyPair('Human', 'human@hmt.ai');
 
 ### Constructors
 
-- [constructor](../wiki/encryption.EncryptionUtils#constructor)
+- [constructor](encryption.EncryptionUtils.md#constructor)
 
 ### Methods
 
-- [encrypt](../wiki/encryption.EncryptionUtils#encrypt)
-- [generateKeyPair](../wiki/encryption.EncryptionUtils#generatekeypair)
-- [getSignedData](../wiki/encryption.EncryptionUtils#getsigneddata)
-- [verify](../wiki/encryption.EncryptionUtils#verify)
+- [encrypt](encryption.EncryptionUtils.md#encrypt)
+- [generateKeyPair](encryption.EncryptionUtils.md#generatekeypair)
+- [getSignedData](encryption.EncryptionUtils.md#getsigneddata)
+- [verify](encryption.EncryptionUtils.md#verify)
 
 ## Constructors
 
@@ -101,7 +103,7 @@ const result = await EncriptionUtils.encrypt('message', publicKeys);
 
 #### Defined in
 
-[encryption.ts:422](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L422)
+[encryption.ts:422](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L422)
 
 ___
 
@@ -150,7 +152,7 @@ const result = await EncriptionUtils.generateKeyPair(name, email, passphrase);
 
 #### Defined in
 
-[encryption.ts:360](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L360)
+[encryption.ts:360](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L360)
 
 ___
 
@@ -182,7 +184,7 @@ const signedData = await EncriptionUtils.getSignedData('message');
 
 #### Defined in
 
-[encryption.ts:317](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L317)
+[encryption.ts:317](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L317)
 
 ___
 
@@ -227,4 +229,4 @@ const result = await EncriptionUtils.verify('message', publicKey);
 
 #### Defined in
 
-[encryption.ts:284](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L284)
+[encryption.ts:284](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/encryption.ts#L284)

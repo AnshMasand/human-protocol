@@ -1,6 +1,8 @@
+[@human-protocol/sdk](../README.md) / [Modules](../modules.md) / [statistics](../modules/statistics.md) / StatisticsClient
+
 # Class: StatisticsClient
 
-[statistics](../wiki/statistics).StatisticsClient
+[statistics](../modules/statistics.md).StatisticsClient
 
 ## Introduction
 
@@ -42,18 +44,18 @@ const statisticsClient = new StatisticsClient(NETWORKS[ChainId.POLYGON_MUMBAI]);
 
 ### Constructors
 
-- [constructor](../wiki/statistics.StatisticsClient#constructor)
+- [constructor](statistics.StatisticsClient.md#constructor)
 
 ### Properties
 
-- [network](../wiki/statistics.StatisticsClient#network)
+- [network](statistics.StatisticsClient.md#network)
 
 ### Methods
 
-- [getEscrowStatistics](../wiki/statistics.StatisticsClient#getescrowstatistics)
-- [getHMTStatistics](../wiki/statistics.StatisticsClient#gethmtstatistics)
-- [getPaymentStatistics](../wiki/statistics.StatisticsClient#getpaymentstatistics)
-- [getWorkerStatistics](../wiki/statistics.StatisticsClient#getworkerstatistics)
+- [getEscrowStatistics](statistics.StatisticsClient.md#getescrowstatistics)
+- [getHMTStatistics](statistics.StatisticsClient.md#gethmtstatistics)
+- [getPaymentStatistics](statistics.StatisticsClient.md#getpaymentstatistics)
+- [getWorkerStatistics](statistics.StatisticsClient.md#getworkerstatistics)
 
 ## Constructors
 
@@ -71,7 +73,7 @@ const statisticsClient = new StatisticsClient(NETWORKS[ChainId.POLYGON_MUMBAI]);
 
 #### Defined in
 
-[statistics.ts:68](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/statistics.ts#L68)
+[statistics.ts:68](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/statistics.ts#L68)
 
 ## Properties
 
@@ -81,7 +83,7 @@ const statisticsClient = new StatisticsClient(NETWORKS[ChainId.POLYGON_MUMBAI]);
 
 #### Defined in
 
-[statistics.ts:61](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/statistics.ts#L61)
+[statistics.ts:61](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/statistics.ts#L61)
 
 ## Methods
 
@@ -119,7 +121,7 @@ const escrowStatisticsApril = await statisticsClient.getEscrowStatistics({
 
 #### Defined in
 
-[statistics.ts:93](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/statistics.ts#L93)
+[statistics.ts:93](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/statistics.ts#L93)
 
 ___
 
@@ -184,7 +186,7 @@ console.log('HMT statistics from 5/8 - 6/8:', {
 
 #### Defined in
 
-[statistics.ts:286](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/statistics.ts#L286)
+[statistics.ts:286](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/statistics.ts#L286)
 
 ___
 
@@ -243,7 +245,7 @@ console.log(
 
 #### Defined in
 
-[statistics.ts:209](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/statistics.ts#L209)
+[statistics.ts:209](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/statistics.ts#L209)
 
 ___
 
@@ -281,4 +283,4 @@ const workerStatisticsApril = await statisticsClient.getWorkerStatistics({
 
 #### Defined in
 
-[statistics.ts:145](https://github.com/humanprotocol/human-protocol/blob/7d9221c2/packages/sdk/typescript/human-protocol-sdk/src/statistics.ts#L145)
+[statistics.ts:145](https://github.com/humanprotocol/human-protocol/blob/a08d8b3c/packages/sdk/typescript/human-protocol-sdk/src/statistics.ts#L145)
