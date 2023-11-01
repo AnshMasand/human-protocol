@@ -1,3 +1,4 @@
+import cron_jobs
 from src.db import SessionLocal
 from src.core.constants import EventTypes
 
@@ -8,7 +9,7 @@ def handle_update_job_event(payload: dict) -> None:
     with SessionLocal.begin() as session:
         job = cvat_service.get_job_by_cvat_id(session, payload.job["id"])
         if not job:
-            cvat_service.create_job(
+            cron_jobs.set_up_projects_for_job(
                 session,
                 payload.job["id"],
                 payload.job["task_id"],
@@ -34,7 +35,7 @@ def handle_create_job_event(payload: dict) -> None:
     with SessionLocal.begin() as session:
         job = cvat_service.get_job_by_cvat_id(session, payload.job["id"])
         if not job:
-            cvat_service.create_job(
+            cron_jobs.set_up_projects_for_job(
                 session,
                 payload.job["id"],
                 payload.job["task_id"],
@@ -50,5 +51,5 @@ def cvat_webhook_handler(cvat_webhook: dict) -> None:
     match cvat_webhook.event:
         case EventTypes.update_job.value:
             handle_update_job_event(cvat_webhook)
-        case EventTypes.create_job.value:
+        case cron_jobs.set_up_projects_for_job.value:
             handle_create_job_event(cvat_webhook)

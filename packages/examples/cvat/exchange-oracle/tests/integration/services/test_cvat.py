@@ -1,5 +1,7 @@
 import unittest
 import uuid
+
+import cron_jobs
 from src.db import SessionLocal
 
 from src.core.constants import Networks
@@ -597,7 +599,7 @@ class ServiceIntegrationTest(unittest.TestCase):
         assignee = "John Doe"
         status = JobStatuses.new.value
 
-        job_id = cvat_service.create_job(
+        job_id = cron_jobs.set_up_projects_for_job(
             session=self.session,
             cvat_id=cvat_id,
             cvat_task_id=cvat_task_id,
@@ -620,7 +622,7 @@ class ServiceIntegrationTest(unittest.TestCase):
     def test_create_job_invalid_cvat_id(self):
         (cvat_project, cvat_task) = create_project_and_task(self.session)
 
-        cvat_service.create_job(
+        cron_jobs.set_up_projects_for_job(
             session=self.session,
             cvat_id=None,
             cvat_task_id=cvat_task.cvat_id,
@@ -634,7 +636,7 @@ class ServiceIntegrationTest(unittest.TestCase):
     def test_create_job_without_task(self):
         cvat_project = create_project(self.session)
 
-        cvat_service.create_job(
+        cron_jobs.set_up_projects_for_job(
             session=self.session,
             cvat_id=123,
             cvat_project_id=cvat_project.cvat_id,
@@ -648,7 +650,7 @@ class ServiceIntegrationTest(unittest.TestCase):
     def test_create_job_invalid_task_reference(self):
         (cvat_project, cvat_task) = create_project_and_task(self.session)
 
-        cvat_service.create_job(
+        cron_jobs.set_up_projects_for_job(
             session=self.session,
             cvat_id=456,
             cvat_task_id=122,
@@ -662,7 +664,7 @@ class ServiceIntegrationTest(unittest.TestCase):
     def test_create_job_invalid_project_reference(self):
         (cvat_project, cvat_task) = create_project_and_task(self.session)
 
-        cvat_service.create_job(
+        cron_jobs.set_up_projects_for_job(
             session=self.session,
             cvat_id=456,
             cvat_task_id=cvat_task.cvat_id,
@@ -676,7 +678,7 @@ class ServiceIntegrationTest(unittest.TestCase):
     def test_create_job_invalid_status(self):
         (cvat_project, cvat_task) = create_project_and_task(self.session)
 
-        cvat_service.create_job(
+        cron_jobs.set_up_projects_for_job(
             session=self.session,
             cvat_id=456,
             cvat_task_id=123,
@@ -690,7 +692,7 @@ class ServiceIntegrationTest(unittest.TestCase):
     def test_create_job_duplicated_cvat_id(self):
         (cvat_project, cvat_task) = create_project_and_task(self.session)
 
-        cvat_service.create_job(
+        cron_jobs.set_up_projects_for_job(
             session=self.session,
             cvat_id=456,
             cvat_task_id=cvat_task.cvat_id,
@@ -699,7 +701,7 @@ class ServiceIntegrationTest(unittest.TestCase):
             status=JobStatuses.new.value,
         )
         self.session.commit()
-        cvat_service.create_job(
+        cron_jobs.set_up_projects_for_job(
             session=self.session,
             cvat_id=456,
             cvat_task_id=cvat_task.cvat_id,
@@ -719,7 +721,7 @@ class ServiceIntegrationTest(unittest.TestCase):
         status = JobStatuses.new.value
 
         # Create a job with valid foreign key reference
-        job_id = cvat_service.create_job(
+        job_id = cron_jobs.set_up_projects_for_job(
             self.session,
             cvat_id,
             cvat_task.cvat_id,
@@ -747,7 +749,7 @@ class ServiceIntegrationTest(unittest.TestCase):
         status = JobStatuses.new.value
 
         # Create a job with valid foreign key reference
-        job_id = cvat_service.create_job(
+        job_id = cron_jobs.set_up_projects_for_job(
             self.session,
             cvat_id,
             cvat_task.cvat_id,
@@ -776,7 +778,7 @@ class ServiceIntegrationTest(unittest.TestCase):
         status = JobStatuses.new.value
 
         # Create a job with valid foreign key reference
-        job_id = cvat_service.create_job(
+        job_id = cron_jobs.set_up_projects_for_job(
             self.session,
             cvat_id,
             cvat_task.cvat_id,
@@ -815,7 +817,7 @@ class ServiceIntegrationTest(unittest.TestCase):
         status = JobStatuses.new.value
 
         # Create a job with valid foreign key reference
-        job_id = cvat_service.create_job(
+        job_id = cron_jobs.set_up_projects_for_job(
             self.session,
             cvat_id,
             cvat_task.cvat_id,
@@ -854,7 +856,7 @@ class ServiceIntegrationTest(unittest.TestCase):
         status = JobStatuses.new.value
 
         # Create a job with valid foreign key reference
-        job_id = cvat_service.create_job(
+        job_id = cron_jobs.set_up_projects_for_job(
             self.session,
             cvat_id,
             cvat_task.cvat_id,
@@ -881,7 +883,7 @@ class ServiceIntegrationTest(unittest.TestCase):
         status = JobStatuses.new.value
 
         # Create a job with valid foreign key reference
-        cvat_service.create_job(
+        cron_jobs.set_up_projects_for_job(
             self.session,
             cvat_id,
             cvat_task.cvat_id,
@@ -894,7 +896,7 @@ class ServiceIntegrationTest(unittest.TestCase):
         assignee = "Bob"
         status = JobStatuses.new.value
 
-        cvat_service.create_job(
+        cron_jobs.set_up_projects_for_job(
             self.session,
             cvat_id,
             cvat_task.cvat_id,
@@ -907,7 +909,7 @@ class ServiceIntegrationTest(unittest.TestCase):
         assignee = "Alice"
         status = JobStatuses.new.value
 
-        cvat_service.create_job(
+        cron_jobs.set_up_projects_for_job(
             self.session,
             cvat_id,
             cvat_task.cvat_id,
@@ -924,7 +926,7 @@ class ServiceIntegrationTest(unittest.TestCase):
 
     def test_delete_project(self):
         (cvat_project, cvat_task) = create_project_and_task(self.session)
-        cvat_service.create_job(
+        cron_jobs.set_up_projects_for_job(
             session=self.session,
             cvat_id=1,
             cvat_task_id=cvat_task.cvat_id,
@@ -932,7 +934,7 @@ class ServiceIntegrationTest(unittest.TestCase):
             assignee="John Doe",
             status=JobStatuses.new.value,
         )
-        cvat_service.create_job(
+        cron_jobs.set_up_projects_for_job(
             session=self.session,
             cvat_id=2,
             cvat_task_id=cvat_task.cvat_id,
